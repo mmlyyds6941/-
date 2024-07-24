@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>html lianxi</title>
+      <style>
+          h1 {
+            color: blue;
+          }
+      </style>
+</head>
+<body>
+  <script>
+      alert("欢迎来到MML的个人网站!")
+  </script>
+  <h1>MML的个人网站</h1>
+  <h2>这里是登录页</h2>
+  <form action="#">
+   
+    <input type="text" placeholder="输入账号"><br>
+    <input type="password" placeholder="输入密码" minlength="8"><br>
+
+<input type="submit" >
+
+  </form>
+  <img src="https://tse4-mm.cn.bing.net/th/id/OIP-C.Cq4khLPWJj0oPbx9P_dRbwAAAA?rs=1&pid=ImgDetMain" alt=""><br> 
+
+   <style>
+    /* 定义底部浮标的基本样式 */
+    .floating-footer {
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        background-color: #f1f1f1;
+        text-align: center;
+        padding: 10px;
+        opacity: 1;
+        transition: opacity 2s;
+        z-index: 1000;
+    }
+</style>
+</head>
+<body>
+
+<!-- 页面的其他内容 -->
+
+<!-- 底部浮标 -->
+<div id="floating-footer" class="floating-footer">
+    <!-- 初始问候语 -->
+    早上好！
+</div>
+
+<script>
+    // 获取当前时间
+    var currentTime = new Date();
+    var hours = currentTime.getHours();
+
+    // 根据时间更改问候语
+    function updateGreeting() {
+        var footer = document.getElementById('floating-footer');
+        if (hours < 12) {
+            footer.textContent = '新的一天，新的开始，愿你拥有无限可能';
+        } else if (hours < 18) {
+            footer.textContent = '阳光正好，微风不燥，愿你享受这美好的时光';
+        } else {
+            footer.textContent = '星辰点点，愿你的心灵得到宁静与安详';
+        }
+    }
+
+    // 设置浮标显示3秒后自动渐隐消失
+    setTimeout(function() {
+        var footer = document.getElementById('floating-footer');
+        footer.style.opacity = '0';
+    }, 3000);
+
+    // 页面加载时更新问候语
+    updateGreeting();
+</script>
+</body>
+</html>
