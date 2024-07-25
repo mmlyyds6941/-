@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>实时上传示例</title>
+</head>
+<body>
+    <input type="text" id="content" placeholder="输入内容" />
+    <button onclick="sendMessage()">发送</button>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.0.0/socket.io.js"></script>
+    <script>
+        var socket = io('https://mmlyyds6941.github.io');
+        function sendMessage() {
+            var content = document.getElementById('content').value;
+            socket.emit('message', content);
+        }
+        socket.on('message', function(content) {
+            // 显示接收到的内容
+            console.log('新消息:', content);
+        });
+    </script>
+</body>
+</html>
